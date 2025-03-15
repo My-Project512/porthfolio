@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adarsh Verma=/Porthfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+            flex-direction: column;
+        }
+
+        /* loding circal */
+        .loader {
+            width: 80px;
+            height: 80px;
+            border: 8px solid white;
+            border-top: 8px solid red;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* start button */
+        .start-btn {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            display: none; /* hide a after 5 secand */
+        }
+
+        .start-btn:hover {
+            background-color: green;
+        }
+        .line {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loding circal -->
+    <div class="loader" id="loader"></div>
+
+    <!-- start button include for javascrept alert button fontion-->
+    <a href="main-file.html"> <!-- this ia my file link don't use of any one copy write this page to mailto512  -->
+        <button class="start-btn" id="startBtn" onclick="showAlert()">
+            Start</button></div>
+    </a>
+
+    <script>
+        //this is a simple javascript click effect
+function showAlert() {
+    alert("Welcome Dear user please click  Ok open webpage");
+}
+        // Loder show after 5 secand letter
+        setTimeout(() => {
+            document.getElementById('loader').style.display = "none"; // Hide a loder
+            document.getElementById('startBtn').style.display = "block"; // show a button
+        }, 5000);
+    </script>
+
+</body>
+</html>
